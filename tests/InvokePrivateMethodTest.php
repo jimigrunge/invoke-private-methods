@@ -1,9 +1,9 @@
 <?php
 
-namespace Jimigrunge\TestHelpers\Tests;
+namespace Jimigrunge\InvokePrivateMethods\Tests;
 
-use Jimigrunge\TestHelpers\InvokePrivateMethod;
-use Jimigrunge\TestHelpers\Tests\Fixtures\DummyClass;
+use Jimigrunge\InvokePrivateMethods\InvokePrivateMethod;
+use Jimigrunge\InvokePrivateMethods\Tests\Fixtures\DummyClass;
 
 class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jimigrunge\TestHelpers\Tests\Fixtures;
+namespace Jimigrunge\InvokePrivateMethods\Tests\Fixtures;
 
 
 class DummyClass

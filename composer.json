@@ -1,6 +1,6 @@
 {
-  "name": "jimigrunge/test-helpers",
-  "description": "Functionality to help with unit testing",
+  "name": "jimigrunge/invoke-private-methods",
+  "description": "This is a class to aid in unit testing of private methods.",
   "type": "library",
   "keywords": [
     "phpunit",
@@ -21,7 +21,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Jimigrunge\\TestHelpers\\": "src/"
+      "Jimigrunge\\InvokePrivateMethods\\": "src/"
     }
   },
   "require": {
@@ -32,7 +32,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Jimigrunge\\TestHelpers\\Tests\\": "tests/"
+      "Jimigrunge\\InvokePrivateMethods\\Tests\\": "tests/"
     }
   }
 }

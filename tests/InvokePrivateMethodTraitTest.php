@@ -1,12 +1,12 @@
 <?php
 
-namespace Jimigrunge\TestHelpers\Tests;
+namespace Jimigrunge\InvokePrivateMethods\Tests;
 
-use Jimigrunge\TestHelpers\Tests\Fixtures\DummyClass;
+use Jimigrunge\InvokePrivateMethods\Tests\Fixtures\DummyClass;
 
 class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
 {
-    use \Jimigrunge\TestHelpers\Traits\InvokePrivateMethodTrait;
+    use \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait;
 
     private $dummyObject;
 

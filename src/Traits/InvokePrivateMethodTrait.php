@@ -1,10 +1,10 @@
 <?php
 
-namespace Jimigrunge\TestHelpers\Traits;
+namespace Jimigrunge\InvokePrivateMethods\Traits;
 
 /**
  * Class InvokePrivateMethodTrait
- * @package Jimigrunge\TestHelpers
+ * @package Jimigrunge\InvokePrivateMethods
  */
 trait InvokePrivateMethodTrait
 {
