@@ -26,7 +26,7 @@ Once you include the class with the 'use' statement, you can utilize it on one o
 You can either create an instance of `InvokePrivateMethod` and call `invokeMethod`, as in `testMyMethod()`,
 or call `invoke()` statically as in `testMyMethodStatically()`
 
-```
+```php
 <?php
 
 // Include class to call private methods
