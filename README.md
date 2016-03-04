@@ -55,7 +55,7 @@ class testclass extends \PHPUnit_Framework_TestCase
     public function testMyMethodStatically()
     {
         // Can also be used statically
-        $result = InvokePrivateMethod::invoke($this->dummyObject, 'myPrivateFunction', ['param1');
+        $result = InvokePrivateMethod::invoke($this->dummyObject, 'myPrivateFunction', ['param1']);
         $this->assertEquals('Test Success', trim($result));
     }
 }
