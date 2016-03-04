@@ -116,6 +116,6 @@ Please insure that any pull requests include complete test coverage.
 
 ## License
 
-[The MIT License (MIT)]([/LICENSE.md])
+[The MIT License (MIT)](/LICENSE.md)
 
 
