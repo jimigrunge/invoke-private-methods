@@ -30,7 +30,7 @@ or call `invoke()` statically as in `testMyMethodStatically()`
 <?php
 
 // Include class to call private methods
-use Jimigrunge\TestHelpers\InvokePrivateMethod;
+use Jimigrunge\InvokePrivateMethods\InvokePrivateMethod;
 
 class testclass extends \PHPUnit_Framework_TestCase
 {
@@ -73,9 +73,12 @@ or call `self::invoke()` statically as in `testMyMethodStatically()`
 ```
 <?php
 
+// Include class to call private methods
+use Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait;
+
 class testclass extends \PHPUnit_Framework_TestCase
 {
-    use \Jimigrunge\TestHelpers\Traits\InvokePrivateMethodTrait;
+    use InvokePrivateMethodTrait;
 
     private $dummyObject;
 
