@@ -1,25 +1,31 @@
-# Test Helpers
+# Invoke Private Methods
 
-This is a collection of classes and scripts to aid in unit testing.
-I mainly use PhpUnit for all testing. I make no guaranties when it comes to other testing
-utilities.
+This is a class to aid in unit testing of private methods.
+It can be used either as a stand alone class or as a trait and called either programmatically or statically.
+
+Although testing of private methods is not recommended in most cases, sometimes it is necessary.
+Such as to insure correct calculations in a protected method aside form the methods that currently utilize it.
+Hence this repository.
+
+_**Note:**
+I mainly use PhpUnit for all testing so I make no guaranties when it comes to other testing utilities as I have not utilized them yet._
 
 ## Installation
 
 ```
-$ composer require jimigrunge/test-helpers
+$ composer require jimigrunge/invoke-private-methods
 ```
 
 ## Usage
 
-### Helper Classes
-
-#### InvokePrivateMethod class
+### class InvokePrivateMethod
 
 This class can be used to test private and protected methods.
-It can be used either as a stand alone class or as a trait and called programmatically or statically.
 
-##### As a class:
+Once you include the class with the 'use' statement, you can utilize it on one of two ways.
+You can either create an instance of `InvokePrivateMethod` and call `invokeMethod`, as in `testMyMethod()`,
+or call `invoke()` statically as in `testMyMethodStatically()`
+
 ```
 <?php
 
@@ -54,11 +60,16 @@ class testclass extends \PHPUnit_Framework_TestCase
     }
 }
 ```
-Once you include the class with the 'use' statement, you can utilize it on one of two ways.
-You can either create an instance of `InvokePrivateMethod` and call `invokeMethod`, as in `testMyMethod()`,
-or call `invoke()` statically as in `testMyMethodStatically()`
 
-##### As a trait
+### trait InvokePrivateMethodTrait
+
+This trait can be used to add the functionality directly to you test class so that it can call it internally.
+
+As with the full class usage, you can utilize it on one of two ways.
+You can either call `$this->invokeMethod`, as in `testMyMethod()`,
+or call `self::invoke()` statically as in `testMyMethodStatically()`
+
+
 ```
 <?php
 
@@ -89,13 +100,9 @@ class testclass extends \PHPUnit_Framework_TestCase
 }
 ```
 
-This is basically the same but the methods now act as methods of the testing class due to the trait.
+### Further detail
 
-More detailed usage examples can be found by studying the tests in the `/tests` directory
-
-
-
-
+More detailed usage examples can be found by studying the tests in the `/tests` directory.
 
 ## Contributing
 
@@ -103,8 +110,9 @@ More detailed usage examples can be found by studying the tests in the `/tests` 
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+5. Submit a pull request.
 
+Please insure that any pull requests include complete test coverage.
 
 ## License
 
