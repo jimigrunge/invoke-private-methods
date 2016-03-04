@@ -1,0 +1,38 @@
+{
+  "name": "jimigrunge/test-helpers",
+  "description": "Functionality to help with unit testing",
+  "type": "library",
+  "keywords": [
+    "phpunit",
+    "phpspec",
+    "testing",
+    "helper",
+    "private",
+    "method"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "James Grundner",
+      "email": "james@jgrundner.com",
+      "homepage": "http://jgrundner.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Jimigrunge\\TestHelpers\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=5.4 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Jimigrunge\\TestHelpers\\Tests\\": "tests/"
+    }
+  }
+}

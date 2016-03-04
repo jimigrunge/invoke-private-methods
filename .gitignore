@@ -1,0 +1,48 @@
+##################################
+# Files and forlders to ignore.
+# Things listed here will be
+#  ignored by version control.
+##################################
+
+##################################
+# Per Environment configurations #
+##################################
+/composer.phar
+/phpunit.xml
+
+########################
+# Auto generated files #
+########################
+/vendor/
+/testdox.txt
+
+##################
+# IDE files      #
+##################
+# Intellij(PhpStorm)
+.idea/
+*.iml
+*.iws
+# Netbeans
+nbproject/
+nbproject/*
+# Eclipse
+.classpath
+.project
+.settings/
+
+######################
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+*~.nib
+*~
