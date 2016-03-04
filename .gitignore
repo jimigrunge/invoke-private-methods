@@ -9,6 +9,7 @@
 ##################################
 /composer.phar
 /phpunit.xml
+/composer.lock
 
 ########################
 # Auto generated files #
