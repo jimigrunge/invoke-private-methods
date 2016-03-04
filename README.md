@@ -70,7 +70,7 @@ You can either call `$this->invokeMethod`, as in `testMyMethod()`,
 or call `self::invoke()` statically as in `testMyMethodStatically()`
 
 
-```
+```php
 <?php
 
 // Include class to call private methods
