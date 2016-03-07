@@ -2,6 +2,8 @@
 
 namespace Jimigrunge\InvokePrivateMethods\Traits;
 
+use Jimigrunge\InvokePrivateMethods\Tests\BadMethodCallException;
+
 /**
  * Class InvokePrivateMethodTrait
  * @package Jimigrunge\InvokePrivateMethods
@@ -33,8 +35,15 @@ trait InvokePrivateMethodTrait
      */
     public static function invoke(&$object, $methodName, array $parameters = array())
     {
-        $reflection = new \ReflectionClass(get_class($object));
-        $method = $reflection->getMethod($methodName);
+
+        try {
+            $method = new \ReflectionMethod($object, $methodName);
+        } catch (\ReflectionException $e) {
+            throw new BadMethodCallException(
+                'Call to undefined method "'.get_class($object).'::'.$methodName.'"'
+            );
+        }
+
         $method->setAccessible(true);
 
         return $method->invokeArgs($object, $parameters);

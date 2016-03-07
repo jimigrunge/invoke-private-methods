@@ -26,15 +26,30 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
         parent::tearDown();
     }
 
-    public function testAccessPrivateMethodCallNoParam()
+    public function testInvokerCanBeCreated()
     {
         $this->assertInstanceOf(InvokePrivateMethod::class, $this->invoker);
+    }
+
+    /**
+     * @expectedException BadMethodCallException
+     */
+    public function testBadMethodCall()
+    {
+        $this->invoker->invokeMethod($this->dummyObject, 'myMissingFunction');
+    }
+
+    /**
+     * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invokeMethod
+     */
+    public function testAccessPrivateMethodCallNoParam()
+    {
         $result = $this->invoker->invokeMethod($this->dummyObject, 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
     }
 
     /**
-     *
+     * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invokeMethod
      */
     public function testAccessPrivateMethodCallWithParam()
     {
@@ -43,7 +58,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     *
+     * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invoke
      */
     public function testAccessPrivateMethodStaticNoParam()
     {
@@ -52,7 +67,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     *
+     * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invoke
      */
     public function testAccessPrivateMethodStaticWithParam()
     {
