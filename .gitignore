@@ -8,14 +8,14 @@
 # Per Environment configurations #
 ##################################
 /composer.phar
-/phpunit.xml
 /composer.lock
 
 ########################
 # Auto generated files #
 ########################
 /vendor/
-/testdox.txt
+tests/TestResults/*
+!tests/TestResults/.gitkeep
 
 ##################
 # IDE files      #
