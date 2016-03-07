@@ -1,6 +1,6 @@
 <?php
 
-namespace Jimigrunge\InvokePrivateMethods\Tests;
+namespace Jimigrunge\InvokePrivateMethods;
 
 
 class BadMethodCallException extends \BadMethodCallException implements ExceptionInterface

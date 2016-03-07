@@ -2,6 +2,7 @@
 
 namespace Jimigrunge\InvokePrivateMethods\Tests;
 
+use Jimigrunge\InvokePrivateMethods\BadMethodCallException;
 use Jimigrunge\InvokePrivateMethods\Tests\Fixtures\DummyClass;
 
 class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase

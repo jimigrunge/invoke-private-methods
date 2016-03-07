@@ -2,7 +2,7 @@
 
 namespace Jimigrunge\InvokePrivateMethods\Traits;
 
-use Jimigrunge\InvokePrivateMethods\Tests\BadMethodCallException;
+use Jimigrunge\InvokePrivateMethods\BadMethodCallException;
 
 /**
  * Class InvokePrivateMethodTrait

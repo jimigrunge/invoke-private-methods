@@ -2,6 +2,7 @@
 
 namespace Jimigrunge\InvokePrivateMethods\Tests;
 
+use Jimigrunge\InvokePrivateMethods\BadMethodCallException;
 use Jimigrunge\InvokePrivateMethods\InvokePrivateMethod;
 use Jimigrunge\InvokePrivateMethods\Tests\Fixtures\DummyClass;
 
