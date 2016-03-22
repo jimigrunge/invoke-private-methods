@@ -14,3 +14,6 @@ install:
 
 script:
   - ./vendor/phpunit/phpunit/phpunit
+
+notifications:
+  email: james@jgrundner.com
