@@ -19,7 +19,7 @@
     </php>
 
     <testsuites>
-        <testsuite name="Package Test Suite">
+        <testsuite name="PackageTestSuite">
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
