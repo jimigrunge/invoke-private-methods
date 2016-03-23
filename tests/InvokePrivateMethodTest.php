@@ -27,9 +27,12 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
         parent::tearDown();
     }
 
+    /**
+     * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::__construct
+     */
     public function testInvokerCanBeCreated()
     {
-        $this->assertInstanceOf(InvokePrivateMethod::class, $this->invoker);
+        $this->assertInstanceOf('Jimigrunge\InvokePrivateMethods\InvokePrivateMethod', $this->invoker);
     }
 
     /**
