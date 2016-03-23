@@ -33,5 +33,6 @@
     <logging>
         <log type="coverage-html" target="./tests/TestResults" lowUpperBound="35" highLowerBound="70"/>
         <log type="testdox-html"  target="./tests/TestResults/testdox.html"/>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
     </logging>
 </phpunit>

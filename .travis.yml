@@ -11,9 +11,12 @@ before_install:
 install:
   - composer install --no-interaction --prefer-source
 
-
 script:
-  - ./vendor/phpunit/phpunit/phpunit
+  - mkdir -p build/logs
+  - ./phpunit
+
+after_success:
+  - travis_retry php vendor/bin/coveralls
 
 notifications:
   email: james@jgrundner.com
