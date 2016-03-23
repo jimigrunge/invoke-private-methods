@@ -9,6 +9,7 @@
 [![License](https://poser.pugx.org/jimigrunge/invoke-private-methods/license)](https://packagist.org/packages/jimigrunge/invoke-private-methods)
 [![Total Downloads](https://poser.pugx.org/jimigrunge/invoke-private-methods/downloads)](https://packagist.org/packages/jimigrunge/invoke-private-methods)
 ![](https://reposs.herokuapp.com/?path=jimigrunge/invoke-private-methods)
+[![This is a forkable respository](https://img.shields.io/badge/forkable-yes-brightgreen.svg)](https://basicallydan.github.io/forkability/?u=jimigrunge&r=invoke-private-methods)
 
 
 This is a class to aid in unit testing of private methods.
