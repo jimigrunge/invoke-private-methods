@@ -5,7 +5,7 @@
 [![Latest Stable Version](https://poser.pugx.org/jimigrunge/invoke-private-methods/v/stable)](https://packagist.org/packages/jimigrunge/invoke-private-methods)
 [![Latest Unstable Version](https://poser.pugx.org/jimigrunge/invoke-private-methods/v/unstable)](https://packagist.org/packages/jimigrunge/invoke-private-methods)
 [![Build Status](https://travis-ci.org/jimigrunge/invoke-private-methods.svg?branch=master)](https://travis-ci.org/jimigrunge/invoke-private-methods)
-[![Coverage Status](https://coveralls.io/repos/jimigrunge/invoke-private-methods/badge.png?branch=master)](https://coveralls.io/r/jimigrunge/invoke-private-methods)
+[![Coverage Status](https://coveralls.io/repos/jimigrunge/invoke-private-methods/badge.png?branch=master&service=github)](https://coveralls.io/r/jimigrunge/invoke-private-methods)
 [![License](https://poser.pugx.org/jimigrunge/invoke-private-methods/license)](https://packagist.org/packages/jimigrunge/invoke-private-methods)
 [![Total Downloads](https://poser.pugx.org/jimigrunge/invoke-private-methods/downloads)](https://packagist.org/packages/jimigrunge/invoke-private-methods)
 ![](https://reposs.herokuapp.com/?path=jimigrunge/invoke-private-methods)
