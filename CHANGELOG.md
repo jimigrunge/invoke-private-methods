@@ -7,3 +7,4 @@ This changelog references the relevant changes (bug and security fixes) done in 
 * Fixed UnitTests to work with PHP 5.4
 * Added Travis CI integration
 * Added badges
+* Added Code of Conduct
