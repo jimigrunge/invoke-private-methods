@@ -13,13 +13,13 @@ trait InvokePrivateMethodTrait
     /**
      * Call protected/private method of a class.
      *
-     * @param object &$object Instantiated object that we will run method on.
+     * @param object $object Instantiated object that we will run method on.
      * @param string $methodName Method name to call
      * @param array $parameters Array of parameters to pass into method.
      *
      * @return mixed Method return.
      */
-    public function invokeMethod(&$object, $methodName, array $parameters = array())
+    public function invokeMethod($object, $methodName, array $parameters = array())
     {
         return self::invoke($object, $methodName, $parameters);
     }
@@ -27,13 +27,13 @@ trait InvokePrivateMethodTrait
     /**
      * Call protected/private method of a class statically.
      *
-     * @param $object
-     * @param $methodName
+     * @param object $object
+     * @param string $methodName
      * @param array $parameters
      *
      * @return mixed
      */
-    public static function invoke(&$object, $methodName, array $parameters = array())
+    public static function invoke($object, $methodName, array $parameters = array())
     {
 
         try {

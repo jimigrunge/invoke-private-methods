@@ -17,6 +17,11 @@
       "email": "james@jgrundner.com",
       "homepage": "http://jgrundner.com",
       "role": "Developer"
+    },
+    {
+      "name": "Sergey Gripinskiy",
+      "email": "web-architect@mail.ru",
+      "role": "Contributor"
     }
   ],
   "autoload": {
