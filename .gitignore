@@ -16,6 +16,7 @@
 /vendor/
 tests/TestResults/*
 !tests/TestResults/.gitkeep
+.phpunit.result.cache
 
 ##################
 # IDE files      #
