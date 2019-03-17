@@ -3,8 +3,10 @@
 ## Pull Requests
 
 1. Fork the repository
-2. Create a new branch for each feature or improvement
-3. Send a pull request from each feature branch to the **develop** branch
+2. Create your feature or improvement branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request.
 
 It is very important to separate new features or improvements into separate feature branches, and to send a
 pull request for each branch. This allows me to review and pull in new features or improvements individually.
