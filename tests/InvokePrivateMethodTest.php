@@ -5,15 +5,16 @@ namespace Jimigrunge\InvokePrivateMethods\Tests;
 use Jimigrunge\InvokePrivateMethods\BadMethodCallException;
 use Jimigrunge\InvokePrivateMethods\InvokePrivateMethod;
 use Jimigrunge\InvokePrivateMethods\Tests\Fixtures\DummyClass;
+use PHPUnit\Framework\TestCase;
 
-class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
+class InvokePrivateMethodTest extends TestCase
 {
     /** @var  InvokePrivateMethod */
     private $invoker;
     /** @var  DummyClass */
     private $dummyObject;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->invoker = new InvokePrivateMethod();
         $this->dummyObject = new DummyClass();
@@ -22,7 +23,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::__construct
      */
-    public function testInvokerCanBeCreated()
+    public function testInvokerCanBeCreated(): void
     {
         $this->assertInstanceOf('Jimigrunge\InvokePrivateMethods\InvokePrivateMethod', $this->invoker);
     }
@@ -30,7 +31,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException BadMethodCallException
      */
-    public function testBadMethodCall()
+    public function testBadMethodCall(): void
     {
         $this->invoker->invokeMethod($this->dummyObject, 'myMissingFunction');
     }
@@ -38,7 +39,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException BadMethodCallException
      */
-    public function testBadMethodCallWithoutObjectInVariable()
+    public function testBadMethodCallWithoutObjectInVariable(): void
     {
         $this->invoker->invokeMethod(new DummyClass(), 'myMissingFunction');
     }
@@ -46,7 +47,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invokeMethod
      */
-    public function testAccessPrivateMethodCallNoParam()
+    public function testAccessPrivateMethodCallNoParam(): void
     {
         $result = $this->invoker->invokeMethod($this->dummyObject, 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
@@ -55,7 +56,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invokeMethod
      */
-    public function testAccessPrivateMethodCallWithParam()
+    public function testAccessPrivateMethodCallWithParam(): void
     {
         $result = $this->invoker->invokeMethod($this->dummyObject, 'myPrivateFunction', ['Jim']);
         $this->assertEquals('Test Success Jim', trim($result));
@@ -64,7 +65,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invoke
      */
-    public function testAccessPrivateMethodStaticNoParam()
+    public function testAccessPrivateMethodStaticNoParam(): void
     {
         $result = InvokePrivateMethod::invoke($this->dummyObject, 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
@@ -73,7 +74,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invoke
      */
-    public function testAccessPrivateMethodStaticWithParam()
+    public function testAccessPrivateMethodStaticWithParam(): void
     {
         $result = InvokePrivateMethod::invoke($this->dummyObject, 'myPrivateFunction', ['Jim']);
         $this->assertEquals('Test Success Jim', trim($result));
@@ -82,7 +83,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invokeMethod
      */
-    public function testAccessPrivateMethodWithoutObjectInVariableNoParam()
+    public function testAccessPrivateMethodWithoutObjectInVariableNoParam(): void
     {
         $result = $this->invoker->invokeMethod(new DummyClass(), 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
@@ -91,7 +92,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invokeMethod
      */
-    public function testAccessPrivateMethodWithoutObjectInVariableWithParam()
+    public function testAccessPrivateMethodWithoutObjectInVariableWithParam(): void
     {
         $result = $this->invoker->invokeMethod(new DummyClass(), 'myPrivateFunction', ['Jim']);
         $this->assertEquals('Test Success Jim', trim($result));
@@ -100,7 +101,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invoke
      */
-    public function testAccessPrivateMethodStaticWithoutObjectInVariableNoParam()
+    public function testAccessPrivateMethodStaticWithoutObjectInVariableNoParam(): void
     {
         $result = InvokePrivateMethod::invoke(new DummyClass(), 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
@@ -109,7 +110,7 @@ class InvokePrivateMethodTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\InvokePrivateMethod::invoke
      */
-    public function testAccessPrivateMethodStaticWithoutObjectInVariableWithParam()
+    public function testAccessPrivateMethodStaticWithoutObjectInVariableWithParam(): void
     {
         $result = InvokePrivateMethod::invoke(new DummyClass(), 'myPrivateFunction', ['Jim']);
         $this->assertEquals('Test Success Jim', trim($result));
