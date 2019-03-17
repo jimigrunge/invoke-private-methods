@@ -2,6 +2,10 @@
 
 This changelog references the relevant changes (bug and security fixes) done in 1.0 minor versions.
 
+
+## [1.0.5] 2019-03-17
+* Updating changelog entry
+
 ## [1.0.4] 2019-03-17
 * Removed pass object by reference requirement
 
