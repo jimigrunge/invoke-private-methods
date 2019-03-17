@@ -4,14 +4,15 @@ namespace Jimigrunge\InvokePrivateMethods\Tests;
 
 use Jimigrunge\InvokePrivateMethods\BadMethodCallException;
 use Jimigrunge\InvokePrivateMethods\Tests\Fixtures\DummyClass;
+use PHPUnit\Framework\TestCase;
 
-class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
+class InvokePrivateMethodTraitTest extends TestCase
 {
     use \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait;
 
     private $dummyObject;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->dummyObject = new DummyClass();
     }
@@ -19,7 +20,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException BadMethodCallException
      */
-    public function testBadMethodCall()
+    public function testBadMethodCall(): void
     {
         $this->invokeMethod($this->dummyObject, 'myMissingFunction');
     }
@@ -27,7 +28,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @expectedException BadMethodCallException
      */
-    public function testBadMethodCallWithoutObjectInVariable()
+    public function testBadMethodCallWithoutObjectInVariable(): void
     {
         $this->invokeMethod(new DummyClass(), 'myMissingFunction');
     }
@@ -35,7 +36,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invokeMethod
      */
-    public function testAccessPrivateMethodCallNoParam()
+    public function testAccessPrivateMethodCallNoParam(): void
     {
         $result = $this->invokeMethod($this->dummyObject, 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
@@ -44,7 +45,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invokeMethod
      */
-    public function testAccessPrivateMethodCallWithParam()
+    public function testAccessPrivateMethodCallWithParam(): void
     {
         // Call invoke method on private function
         $result = $this->invokeMethod($this->dummyObject, 'myPrivateFunction', ['Jim']);
@@ -54,7 +55,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invoke
      */
-    public function testAccessPrivateMethodStaticNoParam()
+    public function testAccessPrivateMethodStaticNoParam(): void
     {
         // Can also be used statically
         $result = self::invoke($this->dummyObject, 'myPrivateFunction');
@@ -64,7 +65,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invoke
      */
-    public function testAccessPrivateMethodStaticWithParam()
+    public function testAccessPrivateMethodStaticWithParam(): void
     {
         // Can also be used statically
         $result = self::invoke($this->dummyObject, 'myPrivateFunction', ['Jim']);
@@ -74,7 +75,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invokeMethod
      */
-    public function testAccessPrivateMethodCallWithoutObjectInVariableNoParam()
+    public function testAccessPrivateMethodCallWithoutObjectInVariableNoParam(): void
     {
         $result = $this->invokeMethod(new DummyClass(), 'myPrivateFunction');
         $this->assertEquals('Test Success', trim($result));
@@ -83,7 +84,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invokeMethod
      */
-    public function testAccessPrivateMethodCallWithoutObjectInVariableWithParam()
+    public function testAccessPrivateMethodCallWithoutObjectInVariableWithParam(): void
     {
         // Call invoke method on private function
         $result = $this->invokeMethod(new DummyClass(), 'myPrivateFunction', ['Jim']);
@@ -93,7 +94,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invoke
      */
-    public function testAccessPrivateMethodStaticWithoutObjectInVariableNoParam()
+    public function testAccessPrivateMethodStaticWithoutObjectInVariableNoParam(): void
     {
         // Can also be used statically
         $result = self::invoke(new DummyClass(), 'myPrivateFunction');
@@ -103,7 +104,7 @@ class InvokePrivateMethodTraitTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers \Jimigrunge\InvokePrivateMethods\Traits\InvokePrivateMethodTrait::invoke
      */
-    public function testAccessPrivateMethodStaticWithoutObjectInVariableWithParam()
+    public function testAccessPrivateMethodStaticWithoutObjectInVariableWithParam(): void
     {
         // Can also be used statically
         $result = self::invoke(new DummyClass(), 'myPrivateFunction', ['Jim']);

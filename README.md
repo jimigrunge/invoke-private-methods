@@ -26,6 +26,14 @@ I mainly use PhpUnit for all testing so I make no guaranties when it comes to ot
 $ composer require jimigrunge/invoke-private-methods
 ```
 
+### Note on version requirements
+
+If you are using a version of PHP less than 7.1 please use the 1.0 branch 
+
+```
+$ composer require jimigrunge/invoke-private-methods:~1.0
+```
+
 ## Usage
 
 ### class InvokePrivateMethod
@@ -117,15 +125,16 @@ class testclass extends \PHPUnit_Framework_TestCase
 
 More detailed usage examples can be found by studying the tests in the `/tests` directory.
 
+
+## Reporting an issue or a feature request
+
+Issues and feature requests are tracked in the [Github issue tracker](https://github.com/jimigrunge/invoke-private-methods/issues).
+
+
 ## Contributing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request.
+[CONTRIBUTING.md](CONTRIBUTING.md)
 
-Please insure that any pull requests include complete test coverage.
 
 ## License
 
