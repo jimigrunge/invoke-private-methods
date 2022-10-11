@@ -130,6 +130,9 @@ More detailed usage examples can be found by studying the tests in the `/tests` 
 
 Issues and feature requests are tracked in the [Github issue tracker](https://github.com/jimigrunge/invoke-private-methods/issues).
 
+## TODO
+
+Test against PHP 8 and update if required
 
 ## Contributing
 
