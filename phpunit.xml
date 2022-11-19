@@ -1,36 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/7.1/phpunit.xsd"
-         backupGlobals               = "false"
-         backupStaticAttributes      = "false"
-         bootstrap                   = "vendor/autoload.php"
-         colors                      = "true"
-         convertErrorsToExceptions   = "true"
-         convertNoticesToExceptions  = "true"
-         convertWarningsToExceptions = "true"
-         processIsolation            = "false"
-         stopOnFailure               = "true"
->
-    <php>
-        <ini name="error_reporting" value="-1" />
-    </php>
-
-    <testsuites>
-        <testsuite name="PackageTestSuite">
-            <directory suffix=".php">./tests/</directory>
-        </testsuite>
-    </testsuites>
-
-    <filter>
-        <whitelist>
-            <directory>src</directory>
-        </whitelist>
-    </filter>
-
-    <logging>
-        <log type="coverage-html" target="./tests/TestResults" lowUpperBound="35" highLowerBound="70"/>
-        <log type="testdox-html"  target="./tests/TestResults/testdox.html"/>
-        <log type="coverage-clover" target="./tests/TestResults/clover.xml"/>
-    </logging>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="true">
+  <coverage>
+    <include>
+      <directory>src</directory>
+    </include>
+    <report>
+      <clover outputFile="./tests/TestResults/clover.xml"/>
+      <html outputDirectory="./tests/TestResults" lowUpperBound="35" highLowerBound="70"/>
+    </report>
+  </coverage>
+  <php>
+    <ini name="error_reporting" value="-1"/>
+  </php>
+  <testsuites>
+    <testsuite name="PackageTestSuite">
+      <directory suffix=".php">./tests/</directory>
+    </testsuite>
+  </testsuites>
+  <logging>
+    <testdoxHtml outputFile="./tests/TestResults/testdox.html"/>
+  </logging>
 </phpunit>

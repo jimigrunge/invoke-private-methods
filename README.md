@@ -28,6 +28,7 @@ $ composer require jimigrunge/invoke-private-methods
 
 ### Note on version requirements
 
+If you are using a version of PHP less than 8.1 please use the 2.0 branch 
 If you are using a version of PHP less than 7.1 please use the 1.0 branch 
 
 ```

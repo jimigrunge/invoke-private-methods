@@ -40,7 +40,7 @@ trait InvokePrivateMethodTrait
             $method = new \ReflectionMethod($object, $methodName);
         } catch (\ReflectionException $e) {
             throw new BadMethodCallException(
-                'Call to undefined method "'.get_class($object).'::'.$methodName.'"'
+                'Call to undefined method "' . get_class($object) . '::' . $methodName . '" [' . $e->getMessage() . ']'
             );
         }
 

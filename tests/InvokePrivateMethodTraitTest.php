@@ -22,6 +22,7 @@ class InvokePrivateMethodTraitTest extends TestCase
      */
     public function testBadMethodCall(): void
     {
+        $this->expectException(BadMethodCallException::class);
         $this->invokeMethod($this->dummyObject, 'myMissingFunction');
     }
 
@@ -30,6 +31,7 @@ class InvokePrivateMethodTraitTest extends TestCase
      */
     public function testBadMethodCallWithoutObjectInVariable(): void
     {
+        $this->expectException(BadMethodCallException::class);
         $this->invokeMethod(new DummyClass(), 'myMissingFunction');
     }
 
