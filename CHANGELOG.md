@@ -2,6 +2,10 @@
 
 This changelog references the relevant changes (bug and security fixes) done in 1.0 minor versions.
 
+## [3.0.1]
+
+* Fix missing ci/cd config
+
 ## [3.0.0]
 
 * Update PHP and PHPUnit version requirements
