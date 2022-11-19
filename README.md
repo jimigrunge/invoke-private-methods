@@ -133,7 +133,7 @@ Issues and feature requests are tracked in the [Github issue tracker](https://gi
 
 ## TODO
 
-Test against PHP 8 and update if required
+Nothing at the moment
 
 ## Contributing
 
