@@ -33,6 +33,7 @@ class InvokePrivateMethodTest extends TestCase
      */
     public function testBadMethodCall(): void
     {
+        $this->expectException(BadMethodCallException::class);
         $this->invoker->invokeMethod($this->dummyObject, 'myMissingFunction');
     }
 
@@ -41,6 +42,7 @@ class InvokePrivateMethodTest extends TestCase
      */
     public function testBadMethodCallWithoutObjectInVariable(): void
     {
+        $this->expectException(BadMethodCallException::class);
         $this->invoker->invokeMethod(new DummyClass(), 'myMissingFunction');
     }
 
@@ -115,5 +117,4 @@ class InvokePrivateMethodTest extends TestCase
         $result = InvokePrivateMethod::invoke(new DummyClass(), 'myPrivateFunction', ['Jim']);
         $this->assertEquals('Test Success Jim', trim($result));
     }
-
 }
